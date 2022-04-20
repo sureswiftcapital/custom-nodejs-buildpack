@@ -1,0 +1,15 @@
+#!/bin/sh
+
+indent() {
+  sed -u 's/^/       /'
+}
+
+echo "nodejs-custom-location-buildpack: compile process start" | indent
+echo "Cache:" | indent
+echo $1 | indent
+echo "Env:" | indent
+echo $2
+
+sh $1/.custom-nodejs-commands
+
+exit 0
