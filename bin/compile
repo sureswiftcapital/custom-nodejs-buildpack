@@ -10,6 +10,6 @@ echo $1 | indent
 echo "Env:" | indent
 echo $2
 
-sh $1/.custom-nodejs-commands
+sh $1/.custom-nodejs-commands $1
 
 exit 0
